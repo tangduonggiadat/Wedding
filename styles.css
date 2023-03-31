@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei Tokumin:wght@400;500;600;700&family=Mako:wght@400;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  background-color: white;
+}
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 0px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+}
+nav{
+    background-color: none;
+    width: 100%;
+    z-index: 998;
+    font-family: 'Kaisei Tokumin', sans-serif;
+  }
+  nav .navbar{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+  }
+  nav .navbar .logo {
+    width: auto;
+    height: 100px;
+  }
+  nav .navbar .menu{
+    display: flex;
+    position: relative;
+    right: 10px;
+    
+  }
+  nav .navbar .menu li{
+    list-style: none;
+    margin: 0 28px;
+  }
+  .navbar .menu a{
+    font-size: 28px;
+    font-weight: 500;
+    color: #1c1c1c;
+    padding: 6px 0;
+    transition: all 0.4s ease;
+  }
+  /* home section styling */
+.home{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: 'Kaisei Tokumin', sans-serif;
+  }
+  .home .home-content{
+     width: 100%;
+     height: auto;
+  }
+  .home .home-content .left{
+    width: 50%;
+    float: left;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-left: 10%;
+    margin-top: -3%;
+    animation: fade-slide-left 2s ease-out forwards; 
+  }
+  .home .home-content .left img{
+    width: 400px;
+    height: auto;
+  }
+  .home .home-content .left p{
+    font-size: 50px ;
+    padding-top: 7px;
+    font-family: 'Kaisei Tokumin', sans-serif;
+  }
+  .home .home-content .right{
+    width: 50%;
+    float: right;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 4% 0 0 5%;
+    animation: fade-slide-right 2s ease-out forwards; 
+  }
+  .home .home-content .right img{
+    width: 260px;
+    height: auto;
+  }
+  .home .home-content .right .arr-more{
+    flex-direction: row;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    animation: arrow 1000ms linear infinite;
+  }
+  .home .home-content .right .arr-more:hover{
+    animation: none;
+    cursor: pointer;
+  }
+  .home .home-content .right .arr-more img{
+   width: 20px;
+   height: auto;
+   margin: 15px
+  }
+  .home .home-content .right .arr-more span{
+    font-size: 16px;
+    font-family: 'Mako';
+    font-weight: 500;
+    padding-top: 50%;
+   }
+   @keyframes arrow {
+    0% {
+      opacity: 0;
+      transform: translateY(-4rem);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes fade-slide-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-3rem);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes fade-slide-right {
+    0% {
+      opacity: 0;
+      transform: translateX(3rem);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* sotry section styling */
+.story{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: 'Kaisei Tokumin', sans-serif;
+  }
+  .story .story-content{
+    width: 100%;
+    height: auto;
+ }
+ .story .story-content .left{
+   width: 50%;
+   float: left;
+   flex-direction: column;
+   padding-left: 60px;
+   display: flex;
+ }
+ .story .story-content .left img{
+   width: 550px;
+   height: 500px;
+ }
+ .story .story-content .right{
+    width: 50%;
+    float: right;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    padding: 4% 4% 0 0;
+  }
+  .story .story-content .right h1{
+   font-size: 40px;
+   text-shadow: 5px 3px #00000085;
+   padding-bottom: 50px;
+  }
+  .story .story-content .right .text-box{
+    border: 2px solid #1c1c1c;
+    padding: 35px;
+   }
+   .story .story-content .right .text-box span{
+    font-size: 20px;
+    animation: typing 2s steps(22),  
+    blink .5s step-end infinite alternate;
+    overflow: hidden;
+    border-right: 1px solid;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
