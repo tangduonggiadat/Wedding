@@ -311,7 +311,7 @@ nav .navbar .menu li {
   width: 27px;
   padding-right: 10px;
 }
-.location .location-content .maps .address span{
+.location .location-content .maps .address p{
   background-color: transparent;
   font-size: 17px;
   color: #fff;
@@ -335,7 +335,7 @@ nav .navbar .menu li {
   padding-bottom: 10px;
   color: #1c1c1c;
 }
-.calendar .calendar-content .title span {
+.calendar .calendar-content .title span{
   font-size: 15px;
   font-family: 'Kaisei Tokumin', sans-serif;
   color: #1c1c1c;
@@ -346,16 +346,17 @@ nav .navbar .menu li {
 }
 .gallery{
   width: 100%;
-  height: 170vh;
+  height: 180vh;
   padding-top: 10px;
 }
 .gallery .gallery-content{
   width: 100%;
   padding: 0 30px 0 30px;
+  text-align: center;
 }
 .gallery .gallery-content .title{
   padding: 20px 0 20px 0;
-  text-align: center;
+  
 }
 .gallery .gallery-content .title h2 {
   font-size: 40px;
@@ -369,80 +370,49 @@ nav .navbar .menu li {
   font-family: 'Kaisei Tokumin', sans-serif;
   color: #1c1c1c;
 }
-.wrapper {
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-.wrapper li {
-  display: inline-block;
-  overflow: hidden;
-  max-height: 200px;
-}
-.wrapper img {
-  max-width: 200px;
-}
-.overlay-container {
-  display: block;
-  position: relative;
- 
-}
-.overlay-container::before {
-  content: attr(data-overlay-text);
-  font: 1em/1.5em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  position: absolute;
-  z-index: 1;
-  /*On top of parent*/
-  top: 40%;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  background: rgba(128, 128, 128, 0.80);
-  opacity: 0;
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.overlay-container:hover::before {
-  opacity: 1;
-  -moz-transform: translateY(20px);
-  -ms-transform: translateY(20px);
-  -o-transform: translateY(20px);
-  -webkit-transform: translateY(20px);
-  transform: translateY(20px);
-}
-.overlay-container .overlay-img {
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.overlay-container:hover .overlay-img {
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
-.gallery .spin{
-  text-align: center;
-  padding-top: 25px;
+
+/* slide */
+.slideShow{
+	height: 85vh;
+	overflow:hidden;
+	position: relative;
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 40px;
 }
 
-.gallery .spin .txt-rotate{
+.slideShow .slide{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	display:none;
+	animation: slide 2s ease-in-out;
+}
+.slideShow .slide.active{
+	display: flex;
+}
+@keyframes slide{
+	0%{
+		transform:scale(1);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+.gallery .gallery-content .txt-rotate{
   color: #1c1c1c;
-  background-color: transparent;
+  font-family: 'Kaisei Tokumin', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+.gallery .gallery-content .spin{
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
 }
 .container {
   position: relative;
@@ -465,13 +435,8 @@ nav .navbar .menu li {
   left: 10px;
   right: 10px;
   background-size: cover;
-  box-shadow:inset 0 0 0 2000px rgba(131, 120, 120, 0.5);
+  box-shadow:inset 0 0 0 0 rgba(131, 120, 120, 0.5);
   display: flex;
-}
-
-span {
-  margin: auto;
-  font-size: 2rem;
 }
 .carousel__face:nth-child(1) {
   background-image: url("https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
@@ -512,3 +477,139 @@ span {
   }
 }
 
+.donate{
+  width: 100%;
+  height: 120vh;
+  padding-top: 10px;
+}
+.donate .donate-content{
+  width: 100%;
+  padding: 0 30px 0 30px;
+  text-align: center;
+}
+.donate .donate-content .title{
+  padding: 20px 0 20px 0;
+  
+}
+.donate .donate-content .title h2 {
+  font-size: 40px;
+  font-family: 'Kaisei Tokumin', sans-serif;
+  font-weight: 700;
+  padding-bottom: 10px;
+  color: #1c1c1c;
+}
+.donate .donate-content .title span {
+  font-size: 15px;
+  font-family: 'Kaisei Tokumin', sans-serif;
+  color: #1c1c1c;
+}
+.donate .donate-content .gif img{
+  width: 100%;
+  height: auto;
+}
+.donate .donate-content .button{
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+  padding-top: 50px;
+}
+.donate .donate-content .button a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+.donate .donate-content .button a:before,
+.donate .donate-content .button a:after{
+  position: absolute;
+  content: "DONATE";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.donate .donate-content .button a:before{
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.donate .donate-content .button a:after{
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.donate .donate-content .button a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 170px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  text-align: center;
+  z-index:1; 
+}
+
+.popup .close {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 40px;
+  color: crimson;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: transparent;
+  
+}
+.popup .close:hover {
+  color: red;
+}
+.popup .content {
+  height: 30%;
+  width: auto;
+  overflow: auto;
+}
+.popup .content img {
+  height: 350px;
+  width: auto;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
