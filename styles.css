@@ -51,7 +51,6 @@ nav .navbar .menu {
   display: flex;
   position: relative;
   right: 10px;
-
 }
 
 nav .navbar .menu li {
@@ -228,7 +227,7 @@ nav .navbar .menu li {
 .story .story-content .right .text-box {
   border: 2px solid #1c1c1c;
   width: 80%;
-  height: 65vh;
+  height: 100%;
   padding: 25px;
 }
 
@@ -320,7 +319,7 @@ nav .navbar .menu li {
 }
 .calendar{
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding-top: 10px;
 }
 .calendar .calendar-content{
@@ -348,7 +347,7 @@ nav .navbar .menu li {
 }
 .gallery{
   width: 100%;
-  height: 180vh;
+  height: 100%;
   padding-top: 10px;
 }
 .gallery .gallery-content{
@@ -416,6 +415,37 @@ nav .navbar .menu li {
   width: 100%;
   padding-top: 20px;
 }
+.image-grid  {
+  height: 100%;
+}
+.image-grid div {
+  width: 25%;
+  height: 240px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: none;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image01 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-01.jpg'); }
+.image02 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-02.jpg'); }
+.image03 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-03.jpg'); }
+.image04 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-04.jpg'); }
+.image05 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-05.jpg'); }
+.image06 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-06.jpg'); }
+.image07 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-07.jpg'); }
+.image08 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-08.jpg'); }
+.image09 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-09.jpg'); }
+.image10 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-10.jpg'); }
+.image11 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-11.jpg'); }
+.image12 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/food-drink-12.jpg'); }
+
+
 .container {
   position: relative;
   width: 320px;
@@ -606,6 +636,9 @@ nav .navbar .menu li {
   width: auto;
   overflow: auto;
 }
+section{
+  padding-top: 20px;
+}
 
 /*Reponsive*/
 @media (max-width: 1280px) {
@@ -614,12 +647,451 @@ nav .navbar .menu li {
     height: auto;
   }
 }
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  .container{
+    display: none;
+  }
+  .image-grid div {
+    display: block;
+  }
+}
 /* Responsive Media Query */
-@media (max-width: 1190px) {}
-  @media (max-width: 1023px) {}
-  @media (max-width: 900px) {}
-@media screen and (max-width: 700px){
+@media (max-width: 1190px) {
+  .container{
+    display: none;
+  }
+  .image-grid div {
+    display: block;
+  }
+  .story{
+    height: 140vh;
+  }
+  .location{
+    height: 100%;
+  }
+  .home{
+    height: 90vh;
+  }
+}
+@media (max-width: 1023px) {
+  nav .navbar {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav .navbar .logo {
+    width: auto;
+    height: 100px;
+    padding-top: 20px;
+  }
+  .navbar .menu a {
+    font-size: 20px;
+  }
+  .home {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin-top: -10px;
+  }
+  .home .home-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    
+  }
+  .home .home-content .left {
+    width: 100%;
+    flex-direction: column-reverse;
+    display: flex;
+    align-items: start;
+    margin: 30px 0 0 -5px;
+  }
+  .home .home-content .left img {
+    width: 92%;
+    text-align: center;
+  }
+  
+  .home .home-content .left p {
+    font-size: 45px;
+    font-family: 'Kaisei Tokumin', sans-serif;
+    padding-bottom: 30px;
+  }
+  .home .home-content .right {
+    width: 100%;
+    align-items: start;
+    position: relative;
+  }
+  .home .home-content .right .lineImg{
+    position: absolute;
+    right: 10%;
+    top: 0;
+    content: url("images/Line1.png");
+    height: 100%;
+    width: auto;
+  }
+  .home .home-content .right .save {
+    width: 50%;
+    height: auto;
+    text-align: left;
+    padding-left: 10px;
+    content: url("images/mobileSave.png");
+  }
+  .home .home-content .right .arr-more {
+   display: none;
+  }
+
+  .story {
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+  }
+  
+  .story .story-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .story .story-content .left {
+    width: 100%;
+    height: auto;
+    align-items: end;
+    padding-right: 8%;
+  }
+  
+  .story .story-content .left img {
+    width: 90%;
+    height: auto;
+  }
+  .story .story-content .left .arr-more {
+    display: none;
+  }
+  .story .story-content .right {
+    width: 100%;
+  }
+  
+  .story .story-content .right h1 {
+    width: 50%;
+    align-self: start;
+    padding-left: 8%;
+    background-color: transparent;
+  }
+  
+  .story .story-content .right .text-box {
+    border: 2px solid #1c1c1c;
+    width: 80%;
+    margin-top: -20px;
+    height: 100%;
+  }
+  .story .story-content .right .text-box span {
+    font-size: 15px;
+  }
+  
+  .location{
+    width: 100%;
+    height: 100%;
+  }
+  .location .location-content{
+    width: 100%;
+    padding: 10px 30px 0 30px;
+    
+  }
+  .location .location-content .title{
+    padding-bottom: 20px;
+    text-align: start;
+  }
+  .location .location-content .title h2 {
+    font-size: 40px;
+    font-family: 'Kaisei Tokumin', sans-serif;
+    font-weight: 700;
+    color: #1c1c1c;
+    padding-bottom: 10px;
+  }
+  .location .location-content .title span {
+    font-size: 15px;
+    font-family: 'Kaisei Tokumin', sans-serif;
+    color: #1c1c1c;
+  }
+  .location .location-content .maps {
+    position: relative;
+    filter: grayscale(100%)
+   }
+  
+   .location .location-content .maps .address img{
+    background-color: transparent;
+    width: 20px;
+    padding-right: 7px;
+    margin-left: -10px;
+  }
+  .location .location-content .maps .address p{
+    background-color: transparent;
+    font-size: 13px;
+    color: #fff;
+  }
+  .calendar{
+    padding-top: 30px;
+    height: 100%;
+  }
+  .calendar .calendar-content .cal img{
+    width: 100%;
+    height: auto;
+    content: url(images/mobileCalen.jpg);
+  }
+
+  .gallery{
+    width: 100%;
+    height: 100%;
+    padding-top: 0px;
+  }
+  /* slide */
+  .slideShow{
+    height: 75vh;
+  }
+  .container{
+    display: none;
+  }
+ 
+  .image-grid {
+    flex-direction: column;
+    flex-wrap: no-wrap;
+  }
+  .image-grid div {
+    display: block;
+     width: 100%; 
+  }
+ 
+  .donate{
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+  }
+  .donate .donate-content .gif img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+
+  }
+  @media (max-width: 900px) {
+    .container{
+      display: none;
+    }
+    .image-grid div {
+      display: block;
+    }
+    
+  }
+@media (max-width: 700px){
+  nav .navbar {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav .navbar .logo {
+    width: auto;
+    height: 100px;
+    padding-top: 20px;
+  }
+  .navbar .menu a {
+    font-size: 20px;
+  }
+  .home {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin-top: -10px;
+  }
+  .home .home-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    
+  }
+  .home .home-content .left {
+    width: 100%;
+    flex-direction: column-reverse;
+    display: flex;
+    align-items: start;
+    margin: 30px 0 0 -5px;
+  }
+  .home .home-content .left img {
+    width: 92%;
+    text-align: center;
+  }
+  
+  .home .home-content .left p {
+    font-size: 45px;
+    font-family: 'Kaisei Tokumin', sans-serif;
+    padding-bottom: 30px;
+  }
+  .home .home-content .right {
+    width: 100%;
+    align-items: start;
+    position: relative;
+  }
+  .home .home-content .right .lineImg{
+    position: absolute;
+    right: 10%;
+    top: 0;
+    content: url("images/Line1.png");
+    height: 313px;
+    width: 1px;
+  }
+  .home .home-content .right .save {
+    width: 50%;
+    height: auto;
+    text-align: left;
+    padding-left: 10px;
+    content: url("images/mobileSave.png");
+  }
+  .home .home-content .right .arr-more {
+   display: none;
+  }
+
+  .story {
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+  }
+  
+  .story .story-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .story .story-content .left {
+    width: 100%;
+    height: auto;
+    align-items: end;
+    padding-right: 8%;
+  }
+  
+  .story .story-content .left img {
+    width: 90%;
+    height: auto;
+  }
+  .story .story-content .left .arr-more {
+    display: none;
+  }
+  .story .story-content .right {
+    width: 100%;
+  }
+  
+  .story .story-content .right h1 {
+    width: 50%;
+    align-self: start;
+    padding-left: 8%;
+    background-color: transparent;
+  }
+  
+  .story .story-content .right .text-box {
+    border: 2px solid #1c1c1c;
+    width: 80%;
+    margin-top: -20px;
+    height: 100%;
+  }
+  .story .story-content .right .text-box span {
+    font-size: 15px;
+  }
+  
+  .location{
+    width: 100%;
+    height: 100%;
+  }
+  .location .location-content{
+    width: 100%;
+    padding: 10px 30px 0 30px;
+    
+  }
+  .location .location-content .title{
+    padding-bottom: 20px;
+    text-align: start;
+  }
+  .location .location-content .title h2 {
+    font-size: 40px;
+    font-family: 'Kaisei Tokumin', sans-serif;
+    font-weight: 700;
+    color: #1c1c1c;
+    padding-bottom: 10px;
+  }
+  .location .location-content .title span {
+    font-size: 15px;
+    font-family: 'Kaisei Tokumin', sans-serif;
+    color: #1c1c1c;
+  }
+  .location .location-content .maps {
+    position: relative;
+    filter: grayscale(100%)
+   }
+  
+   .location .location-content .maps .address img{
+    background-color: transparent;
+    width: 20px;
+    padding-right: 7px;
+    margin-left: -10px;
+  }
+  .location .location-content .maps .address p{
+    background-color: transparent;
+    font-size: 13px;
+    color: #fff;
+  }
+  .calendar{
+    padding-top: 30px;
+    height: 100%;
+  }
+  .calendar .calendar-content .cal img{
+    width: 100%;
+    height: auto;
+    content: url(images/mobileCalen.jpg);
+  }
+
+  .gallery{
+    width: 100%;
+    height: 100%;
+    padding-top: 0px;
+  }
+  /* slide */
+  .slideShow{
+    height: 75vh;
+  }
+  .container{
+    display: none;
+  }
+ 
+  .image-grid {
+    flex-direction: column;
+    flex-wrap: no-wrap;
+  }
+  .image-grid div {
+    display: block;
+     width: 100%; 
+  }
+ 
+  .donate{
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+  }
+  .donate .donate-content .gif img{
+    width: 100%;
+    height: 100%;
+  }
+  
   .box{
     width: 70%;
   }
@@ -627,8 +1099,23 @@ nav .navbar .menu li {
     width: 70%;
   }
 }
-@media (min-height: 700px) {}
-@media (max-width: 480px){}
-section{
-  background-color: aqua;
+@media screen and (max-width: 480px) {
+  nav .navbar .menu li {
+    list-style: none;
+    margin: 0 15px;
+  }
+  .popup {
+    width: 90%;
+  }
+  
+  .popup .close {
+    font-size: 30px;
+  }
+  .popup .content img {
+    height: 200px;
+    width: auto;
+    overflow: auto;
+  }
 }
+@media (min-height: 700px) {}
+
