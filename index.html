@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <!-- Fontawesome CDN Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -33,46 +34,172 @@
         <img src="images/thumb.jpg">
         <p>19 . 11. 2023</p>
       </div>
-      <div class="right">
-        <img src="images/save.jpg">
-        <div class="arr-more">
-          <img src="images/Arr1.png">
-          <span>see</br>story</span>
+        <div class="right">
+          <img class="save" src="images/save.jpg">
+          <a href="#store">
+          <div class="arr-more">
+            <img src="images/Arr1.png">
+            <span>see</br>story</span>
+          </div>
+          <div class="line">
+            <img class="lineImg"/>
+          </div>
         </div>
-      </div>
+      </a>
     </div>
   </section>
   <!-- Story Section Start -->
   <section class="story" id="store">
     <div class="story-content">
       <div class="left">
-        <img src="images/gif.jpg">
+        <img src="images/gifAnimation.gif">
+        <a href="#store">
+          <div class="arr-more">
+            <img src="images/Arr1.png">
+            <span>see</br>invite</span>
+          </div>
+        </a>
       </div>
       <div class="right">
         <h1>Our Story</h1>
         <div class="text-box">
-          <span>
-            The bride and groom continued to talk and</br>
-            laugh as they walked through the park,getting</br>
-            to know each other better. They discovered that</br>
-            they had many shared interests and values, and</br>
-            their conversation flowed effortlessly. It was </br>
-            as if they had known each other for years.As they</br>
-            walked, the groom couldn't help but feel that this </br>
-            was meant to be. He had never felt such a trong </br>
-            connection with anyone before, and he knew that he</br>
-            had to see the bride again. Before they parted ways, </br>
-            he asked for her phone number, and she happily gave</br>
-            it to him. Over the next few weeks, the groom and </br>
-            bride talked on the phone every day and went on </br>
-            several dates.</br>
-            They quickly fell in love and knew that they wanted</br>
+          <span id="type">
+            The bride and groom continued to talk and
+            laugh as they walked through the park,getting
+            to know each other better. They discovered that
+            they had many shared interests and values, and
+            their conversation flowed effortlessly. It was
+            as if they had known each other for years.As they
+            walked, the groom couldn't help but feel that this
+            was meant to be. He had never felt such a trong
+            connection with anyone before, and he knew that he
+            had to see the bride again. Before they parted ways,
+            he asked for her phone number, and she happily gave
+            it to him. Over the next few weeks, the groom and
+            bride talked on the phone every day and went on
+            several dates.
+            They quickly fell in love and knew that they wanted
             to spend the rest of their lives together.
 
           </span>
         </div>
       </div>
     </div>
+  </section>
+  <!-- Location Section Start -->
+  <section class="location" id="location">
+    <div class="location-content">
+      <div class="title">
+        <h2>Location</h2>
+        <span>The wedding will be held at this venue. Please refer to the map and</br> follow the directions.</span>
+      </div>
+      <div class="maps">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.046293235643!2d109.31849507536302!3d13.096252687230637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316fec48e15c12af%3A0x249c2596c0307bef!2sSala%20Tuy%20H%C3%B2a%20Beach%20Hotel!5e0!3m2!1svi!2s!4v1680285452483!5m2!1svi!2s"
+          width="100%" height="610" style="border:0;" allowfullscreen="allowfullscreen" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="address">
+          <img src="images/pin.png" />
+          <p>Sala Tuy Hoa 122 Doc Lap phuong 5</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- calendar Section Start -->
+  <section class="calendar" id="calendar">
+    <div class="calendar-content">
+      <div class="title">
+        <h2>Schedule</h2>
+        <span>The schedule will proceed as planned. Valued guests, please stay</br>
+          tuned for further information below.</span>
+      </div>
+      <div class="cal">
+        <img src="images/calendar.jpg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Gellary Section Start -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-content">
+      <div class="title">
+        <h2>Gallery</h2>
+        <span>Let's look back at the moments of the bride </br> and groom,we have experienced beautiful and happy
+          moments
+          together.</span>
+      </div>
+      <!-- My slide Section Start -->
+      <!-- Section Tag and Other Div will same where we need to put same CSS -->
+      <section class="slideShow" id="slideshow">
+        <div class="slider">
+          <div class="slide active" style="background-image: url('images/1w.jpeg')">
+          </div>
+          <div class="slide" style="background-image: url('images/2w.jpeg')">
+
+          </div>
+          <div class="slide" style="background-image: url('images/3w.jpeg')">
+
+          </div>
+          <div class="slide" style="background-image: url('images/4w.jpeg')">
+
+          </div>
+        </div>
+      </section>
+      <span class="txt-rotate" data-period="2000" data-rotate='[ "Memories", "Sweet", "Together"]'></span>
+      <div class="spin">
+        <div class="image-grid">
+          <div class="image01"></div>
+          <div class="image02"></div>
+          <div class="image03"></div>
+          <div class="image04"></div>
+          <div class="image05"></div>
+          <div class="image06"></div>
+          <div class="image07"></div>
+          <div class="image08"></div>
+          <div class="image09"></div>
+          <div class="image10"></div>
+          <div class="image11"></div>
+          <div class="image12"></div>
+        </div>
+        <div class="container">
+          <div class="carousel">
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Chat Section Start -->
+  <section class="donate" id="donate">
+    <div class="donate-content">
+      <div class="title">
+        <h2>Watch our stuck, please...</h2>
+        <span>Watch and use your mind to understand our story.</span>
+      </div>
+      <div class="gif">
+        <img src="images/chat.gif" />
+      </div>
+      <span class="button"><a href="#qrcode"></a></span>
+    </div>
+    <a href="#donate">
+      <div id="qrcode" class="overlay">
+        <div class="popup">
+          <a class="close" href="#donate">&times;</a>
+          <div class="content">
+            <img src="images/qrcode.jpg" />
+          </div>
+        </div>
+      </div>
+    </a>
   </section>
 
   <script src="script.js"></script>
