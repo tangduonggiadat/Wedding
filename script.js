@@ -1,3 +1,49 @@
+
+const button = document.getElementById("footer");
+
+// Lấy ra tất cả các section trên trang web
+const sections = document.querySelectorAll("section");
+
+// Lưu giữ trạng thái của việc kiểm tra xem trang web có đang ở cuối hay không
+let isAtBottom = false;
+
+// Hàm kiểm tra xem trang web đang ở cuối hay không
+function checkIfAtBottom() {
+  // Lấy ra kích thước của cửa sổ trình duyệt
+  const windowHeight = window.innerHeight;
+  
+  // Lấy ra kích thước của toàn bộ trang web
+  const documentHeight = document.documentElement.scrollHeight;
+
+  // Tính toán giá trị scrollTop và scrollBottom
+  const scrollTop = window.pageYOffset;
+  const scrollBottom = scrollTop + windowHeight;
+
+  // Kiểm tra nếu scrollBottom bằng với documentHeight thì đang ở cuối trang
+  if (scrollBottom === documentHeight) {
+    // Nếu trang web đang ở cuối và chưa được đánh dấu là ở cuối trang, in ra thông báo và cập nhật trạng thái
+    if (!isAtBottom) {
+      button.style.display="block"
+      isAtBottom = true;
+    }
+  } else {
+    // Nếu không ở cuối trang, đánh dấu lại là chưa ở cuối trang
+    isAtBottom = false;
+    button.style.display="none"
+  }
+}
+
+// Gọi hàm kiểm tra xem trang web đang ở cuối hay không mỗi khi có sự kiện scroll
+window.addEventListener("scroll", () => {
+  window.requestAnimationFrame(checkIfAtBottom);
+});
+
+// Gọi hàm kiểm tra xem trang web đang ở cuối hay không khi tải trang web
+checkIfAtBottom();
+
+
+
+
 function typeEffect(element, speed) {
   var text = element.innerHTML;
   element.innerHTML = " ";
@@ -191,3 +237,5 @@ $(document).on("click", ".img-c.active", function() {
     copy.remove();
   }, 500)
 })
+
+
