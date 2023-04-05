@@ -668,17 +668,26 @@ section{
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
+    position:relative;
+    display: flex;
+    justify-content: center;
 }
-.footer #button:active {
+.footer #button:hover {
 	width:105px;
 	height:105px;
 	border: #1c1c1c 5px solid;
-	-webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
 	position:relative;
+}
+.footer #button #nhan{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 20px;
+  height: 20px;
+  background-color: #1c1c1c;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+
 }
 .footer {
 	bottom:0;
@@ -696,13 +705,9 @@ section{
 	z-index:999;
   background-color: transparent;
 }
-.footer:hover {
-	-webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
-	height: 28em;
+
+.footer.container {
+  height: 28em;
 }
 .footer #container{
 	margin-top:5px;

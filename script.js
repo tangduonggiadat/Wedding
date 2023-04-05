@@ -41,8 +41,24 @@ window.addEventListener("scroll", () => {
 // Gọi hàm kiểm tra xem trang web đang ở cuối hay không khi tải trang web
 checkIfAtBottom();
 
-
-
+const btn = document.getElementById('button');
+const footer = document.getElementById('footer');
+const nhan = document.getElementById('nhan');
+let isClicked = false;
+btn.addEventListener('click', function() {
+  footer.classList.toggle('container');
+  if(footer.classList.contains('container')){
+    btn.style.width= "105px";
+    btn.style.height= "105px";
+    btn.style.border= "#1c1c1c 5px solid";
+    nhan.style.transform= "translate(-50%, -50%) rotate(180deg)";
+  } else{
+    btn.style.width= "85px";
+    btn.style.height= "85px";
+    btn.style.border= "#1c1c1c 8px solid";
+    nhan.style.transform= "translate(-50%, -50%) rotate(0deg)";
+  }
+});
 
 function typeEffect(element, speed) {
   var text = element.innerHTML;
